@@ -1,0 +1,60 @@
+main {
+  margin-top: 0;
+}
+
+.widget {
+  top: auto;
+  width: 600px;
+
+  grid-template-columns: 1.25fr 1fr;
+  -ms-grid-columns: 1.25fr 1fr;
+
+  /* the left side */
+  .today-pane {
+    grid-row: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  /* the right side */
+  .forecast-pane {
+    padding: $gutter 1.2rem;
+    grid-row: 1;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+
+    ul {
+      padding: 0 1rem;
+      flex-direction: column;
+    }
+    li {
+      width: 100%;
+      list-style: none;
+      padding: 0.65rem 0 0 .5rem ;
+      border-bottom: 2px solid $forecastColor;
+      i {display: none;}
+    }
+    li div:nth-child(1) {  /*sunny cloudy ...*/
+      display: block;
+      font-size: 0.75rem;
+      padding: .25rem $gutter;
+    }
+
+    li div:nth-child(2) {  /*12C  ...*/
+      padding: .4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 1.45rem;
+      text-align: left;
+    }
+
+    .day {
+      font-size: .5rem;
+      grid-row: 3;
+    }
+
+  }
+}

@@ -1,0 +1,256 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+@font-face {
+  font-family: 'Microsoft Sans Serif';
+  src: url("../css/font/Microsoft Sans Serif.ttf") format("truetype"); }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 12px;
+  width: 100vw; }
+
+main {
+  position: relative;
+  /* Check: I've assumed that the top and bottom grey area is for header/footer */
+  /* If that's not the case, uncomment css for margin-top and .widget {top} */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden; }
+
+.spinner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.widget {
+  display: grid;
+  display: -ms-grid;
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 420px;
+  background-color: rgba(27, 29, 29, 0.5);
+  /* the left side */
+  /* the right side */ }
+  .widget .today-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.6rem 2%;
+    color: rgba(255, 255, 255, 0.9);
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    /*Saturday, Feb  2016 8:30 PM...*/
+    /*sunny cloudy ...*/
+    /*12C  ...*/ }
+    .widget .today-pane p {
+      padding: .25rem 1.8rem; }
+    .widget .today-pane i {
+      padding-right: .5rem; }
+    .widget .today-pane .temp {
+      /*12C  ...*/
+      padding-left: 0;
+      font-size: 6.36rem;
+      letter-spacing: -8px; }
+      .widget .today-pane .temp .degree {
+        position: relative;
+        top: -0.5em;
+        font-size: 4rem; }
+    .widget .today-pane .date {
+      font-size: 1.1rem; }
+    .widget .today-pane .condition {
+      font-size: 2.15rem; }
+    .widget .today-pane .city {
+      font-size: 1.44rem; }
+  .widget .forecast-pane {
+    background-color: rgba(27, 29, 29, 0.55);
+    padding: 2%;
+    height: fit-content;
+    color: #d0d0d0;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2; }
+    .widget .forecast-pane ul {
+      display: flex; }
+    .widget .forecast-pane li {
+      flex-basis: 16.66%;
+      list-style: none;
+      padding: 0.4rem 2%; }
+    .widget .forecast-pane li div:nth-child(1) {
+      /*sunny cloudy ...*/
+      display: none;
+      font-size: 0.75rem;
+      padding: 0.25rem 2%; }
+    .widget .forecast-pane li div:nth-child(2) {
+      /*12C  ...*/
+      font-size: 1rem;
+      display: grid;
+      display: -ms-grid;
+      grid-row-gap: .5rem;
+      text-align: center; }
+    .widget .forecast-pane .day {
+      /*Sunday Monday ...*/
+      font-size: .5rem;
+      grid-row: 1;
+      -ms-grid-row: 1; }
+
+/* medium screen */
+@media only screen and (min-width: 560px) {
+  main {
+    margin-top: 0; }
+  .widget {
+    top: auto;
+    width: 600px;
+    grid-template-columns: 1.25fr 1fr;
+    -ms-grid-columns: 1.25fr 1fr;
+    /* the left side */
+    /* the right side */ }
+    .widget .today-pane {
+      grid-row: 1;
+      grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-column: 1; }
+    .widget .forecast-pane {
+      padding: 2% 1.2rem;
+      grid-row: 1;
+      grid-column: 2;
+      -ms-grid-row: 1;
+      -ms-grid-column: 2; }
+      .widget .forecast-pane ul {
+        padding: 0 1rem;
+        flex-direction: column; }
+      .widget .forecast-pane li {
+        width: 100%;
+        list-style: none;
+        padding: 0.65rem 0 0 .5rem;
+        border-bottom: 2px solid #d0d0d0; }
+        .widget .forecast-pane li i {
+          display: none; }
+      .widget .forecast-pane li div:nth-child(1) {
+        /*sunny cloudy ...*/
+        display: block;
+        font-size: 0.75rem;
+        padding: 0.25rem 2%; }
+      .widget .forecast-pane li div:nth-child(2) {
+        /*12C  ...*/
+        padding: .4rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 1.45rem;
+        text-align: left; }
+      .widget .forecast-pane .day {
+        font-size: .5rem;
+        grid-row: 3; } }
+
+/*
+@media only screen and (min-width: 1028px) {
+    @import "large";
+}
+*/
