@@ -150,7 +150,10 @@ main {
     .widget .today-pane p {
       padding: .25rem 1.8rem; }
     .widget .today-pane i {
-      padding-right: .5rem; }
+      position: relative;
+      bottom: 14px;
+      font-size: 5rem;
+      padding-right: .35rem; }
     .widget .today-pane .temp {
       /*12C  ...*/
       padding-left: 0;

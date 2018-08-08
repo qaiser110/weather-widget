@@ -53,7 +53,12 @@ main {
     -ms-grid-column-span: 2;
 
     p { padding: .25rem 1.8rem; }
-    i { padding-right: .5rem }
+    i {
+      position: relative;
+      bottom: 14px;
+      font-size: 5rem;
+      padding-right: .35rem
+    }
 
     .temp {  /*12C  ...*/
       padding-left: 0;
