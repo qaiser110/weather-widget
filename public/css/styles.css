@@ -133,10 +133,51 @@ main {
   background-color: rgba(27, 29, 29, 0.5);
   /* the left side */
   /* the right side */ }
+  .widget .edit-city {
+    position: absolute;
+    top: 100px;
+    left: 10px; }
+    .widget .edit-city input {
+      display: block;
+      width: 375px;
+      height: 45px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      -webkit-appearance: none;
+      background-color: rgba(255, 255, 255, 0.9); }
+    .widget .edit-city .react-autosuggest__input--open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
+    .widget .edit-city .react-autosuggest__suggestions-container--open {
+      display: block;
+      position: absolute;
+      top: 44px;
+      width: 375px;
+      border: 1px solid #aaa;
+      background-color: rgba(255, 255, 255, 0.9);
+      font-size: 1rem;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      z-index: 2;
+      overflow: hidden; }
+      .widget .edit-city .react-autosuggest__suggestions-container--open ul {
+        max-height: 250px;
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0; }
+      .widget .edit-city .react-autosuggest__suggestions-container--open li {
+        cursor: pointer;
+        padding: 10px 20px;
+        list-style: none; }
+        .widget .edit-city .react-autosuggest__suggestions-container--open li div {
+          color: rgba(51, 51, 51, 0.9); }
   .widget .today-pane {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     padding: 1.6rem 2%;
     color: rgba(255, 255, 255, 0.9);
     grid-row: 1;
@@ -169,6 +210,9 @@ main {
       font-size: 2.15rem; }
     .widget .today-pane .city {
       font-size: 1.44rem; }
+      .widget .today-pane .city img {
+        cursor: pointer;
+        margin-left: 6px; }
   .widget .forecast-pane {
     background-color: rgba(27, 29, 29, 0.55);
     padding: 2%;
@@ -214,6 +258,12 @@ main {
     -ms-grid-columns: 1.25fr 1fr;
     /* the left side */
     /* the right side */ }
+    .widget .edit-city {
+      left: 120px; }
+      .widget .edit-city input {
+        width: 350px; }
+      .widget .edit-city .react-autosuggest__suggestions-container--open {
+        width: 350px; }
     .widget .today-pane {
       grid-row: 1;
       grid-column: 1;

@@ -9,6 +9,16 @@ main {
   grid-template-columns: 1.25fr 1fr;
   -ms-grid-columns: 1.25fr 1fr;
 
+  .edit-city {
+    left: 120px;
+    input {
+      width: 350px;
+    }
+    .react-autosuggest__suggestions-container--open {
+      width: 350px;
+    }
+  }
+
   /* the left side */
   .today-pane {
     grid-row: 1;

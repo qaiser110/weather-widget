@@ -39,11 +39,60 @@ main {
   height: 420px;
   background-color:  $widgetBgColor;
 
+  .edit-city {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+
+    input {
+      display: block;
+      width: 375px;
+      height: 45px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      -webkit-appearance: none;
+      background-color:  $inputBgColor;
+    }
+    .react-autosuggest__input--open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .react-autosuggest__suggestions-container--open {
+      display: block;
+      position: absolute;
+      top: 44px;
+      width: 375px;
+      border: 1px solid #aaa;
+      background-color:  $inputBgColor;
+      font-size: 1rem;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      z-index: 2;
+      overflow: hidden;
+      ul  {
+        max-height: 250px;
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        cursor: pointer;
+        padding: 10px 20px;
+        list-style: none;
+        div {color: darken($fontColor, 80%)}
+      }
+    }
+
+  }
+
   /* the left side */
   .today-pane {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     padding: 1.6rem $gutter;
     color: $fontColor;
     grid-row: 1;
@@ -74,7 +123,13 @@ main {
 
     .condition { font-size: 2.15rem; } /*sunny cloudy ...*/
 
-    .city { font-size: 1.44rem; } /*12C  ...*/
+    .city {
+      font-size: 1.44rem;
+      img {
+        cursor: pointer;
+        margin-left: 6px;
+      }
+    } /*12C  ...*/
 
   }
 
